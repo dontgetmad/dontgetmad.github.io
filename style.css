@@ -1,1 +1,40 @@
-
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+#title {
+    text-align: center;
+}
+.container {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;  /* This centers the container horizontally */
+}
+textarea {
+    width: 100%;
+    min-height: 200px;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+button {
+    display: block;
+    padding: 8px 16px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+#barcodeContainer div {
+    margin: 10px 0;      /* Space between barcodes */
+    text-align: center;  /* Center the barcode SVGs */
+}
+#barcodeContainer svg {
+    max-width: 100%;     /* Ensure barcodes don't overflow */
+}
