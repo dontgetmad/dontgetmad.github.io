@@ -1,1 +1,20 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js"></script>
+    <link rel="stylesheet" href="style.css"> 
+    <title>Barcode Generator</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Barcode Generator</h1>
+        <textarea placeholder="Enter your text here...", id="input"></textarea>
+        <button onclick="generateBarcode()">Generate barcodes</button>
+        <div id="barcodeContainer"></div>
+        <svg id="barcode"></svg>
+    </div>
+</body>
+</html>
