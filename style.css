@@ -38,3 +38,8 @@ button {
 #barcodeContainer svg {
     max-width: 100%;     /* Ensure barcodes don't overflow */
 }
+
+#generatedAmountContainer {
+    text-align: center;
+    padding: 10px;
+}   
