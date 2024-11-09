@@ -9,6 +9,7 @@ function generateBarcode() {
             barcodeDiv.innerHTML = `<svg id="barcode${i}"></svg>`;
             barcodeContainer.appendChild(barcodeDiv);
             JsBarcode(`#barcode${i}`, lines[i]);
+            document.getElementById("generatedAmount").innerHTML = lines.length;
         }
     } catch (error) {
         console.log("Error generating barcode:", error);
