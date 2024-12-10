@@ -1,12 +1,18 @@
+function showRandomImage() {
+    let image_quantity = 98;
+    const randomIndex = Math.floor(Math.random() * image_quantity);
+    const imgElement = document.getElementById('randomImage');
+    imgElement.src = `images/image_${randomIndex}.jpeg`;
+}
+
+document.addEventListener("DOMContentLoaded", showRandomImage);
+
 function generateBarcode() {
     barcodeContainer.innerHTML = '';
     input = document.getElementById("input").value;
     const lines = input.split('\n').filter(line => line.trim() !== '');
+	console.log("starting...");
     try {
-        let image_quantity = 98;
-        const randomIndex = Math.floor(Math.random() * image_quantity) + 1;
-        const imgElement = document.getElementById('randomImage');
-        imgElement.src = `image_${randomIndex}.jpeg`;
         
         for (let i  = 0; i < lines.length; i++) {
             const barcodeDiv = document.createElement('div');
