@@ -2,7 +2,7 @@ function showRandomImage() {
     let image_quantity = 98;
     const randomIndex = Math.floor(Math.random() * image_quantity);
     const imgElement = document.getElementById('randomImage');
-    imgElement.src = `images/image_1.jpeg`;
+    imgElement.src = `images/image_11.jpeg`;
 }
 
 document.addEventListener("DOMContentLoaded", showRandomImage);
