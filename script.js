@@ -2,7 +2,12 @@ function showRandomImage() {
     let image_quantity = 98;
     const randomIndex = Math.floor(Math.random() * image_quantity);
     const imgElement = document.getElementById('randomImage');
-    imgElement.src = `images/image_11.jpeg`;
+	if (imgElement) {
+        imgElement.src = `images/image_11.jpeg`;
+        console.log(`Image src set to: images/image_11.jpeg`);
+    } else {
+        console.error("Image element with id 'randomImage' not found.");
+    }
 }
 
 document.addEventListener("DOMContentLoaded", showRandomImage);
