@@ -42,4 +42,8 @@ button {
 #generatedAmountContainer {
     text-align: center;
     padding: 10px;
-}   
+}
+
+#video_1 {
+    width: 100%
+}
