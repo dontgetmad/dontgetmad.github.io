@@ -4,7 +4,7 @@ function showRandomImage() {
     const imgElement = document.getElementById('randomImage');
 	if (imgElement) {
         imgElement.src = `images/image_${randomIndex}.jpeg`;
-        console.log(`Image src set to: images/image_${randomIndex}.jpeg`);
+        console.log(`---`);
     } else {
         console.error("Image element with id 'randomImage' not found.");
     }
