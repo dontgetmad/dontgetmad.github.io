@@ -1,32 +1,14 @@
-    function showRandomImage() {
-        const imageQuantity = 229; // Total number of images
-        const randomIndex = Math.floor(Math.random() * imageQuantity);
-        const formats = ['jpeg', 'jpg', 'png', 'webp']; // Allowed formats
-
-        // Attempt to load the random image with different formats
-        let loaded = false;
-        const imgElement = document.getElementById('randomImage');
-
-        for (const format of formats) {
-            if (!loaded) {
-                const testImage = new Image();
-                testImage.src = `images/image_${randomIndex}.${format}`;
-                testImage.onload = () => {
-                    imgElement.src = testImage.src;
-                    console.log(`Image loaded: image_${randomIndex}.${format}`);
-                    loaded = true;
-                };
-                testImage.onerror = () => {
-                    console.warn(`Failed to load: image_${randomIndex}.${format}`);
-                };
-            }
-        }
-
-        if (!imgElement) {
-            console.error("Image element with id 'randomImage' not found.");
-        }
-    }
-
+function showRandomImage() {
+    let image_quantity = 229;
+    const randomIndex = Math.floor(Math.random() * image_quantity);
+    const imgElement = document.getElementById('randomImage');
+	if (imgElement) {
+        imgElement.src = `images/image_${randomIndex}.jpeg`;
+        console.log(`---`);
+    } else {
+        console.error("Image element with id 'randomImage' not found.");
+	}
+}
 
 document.addEventListener("DOMContentLoaded", showRandomImage);
 
