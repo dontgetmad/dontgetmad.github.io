@@ -1,5 +1,5 @@
 function showRandomImage() {
-    let image_quantity = 227;
+    let image_quantity = 276;
     const randomIndex = Math.floor(Math.random() * image_quantity);
     const imgElement = document.getElementById('randomImage');
 	if (imgElement) {
