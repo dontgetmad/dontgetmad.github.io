@@ -13,7 +13,6 @@ function showRandomImage() {
   const imageElement = document.createElement('img');
 
   imageElement.src = `images/image_${randomIndex}.jpeg`;
-  imageElement.alt = `Random image ${randomIndex}`;
 
   const imageContainer = document.getElementById('image-container');
 
