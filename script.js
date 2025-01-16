@@ -34,7 +34,7 @@ function showRandomVideo() {
     console.log(videoSource);
     const videoSourceElement = document.createElement('source');
     videoSourceElement.src = videoSource;
-    videoSourceElement.type = 'video/mp4';
+    videoSourceElement.type = 'video/MP4';
     videoElement.append(videoSourceElement);
 
     const videoContainer = document.getElementById('video-container');
