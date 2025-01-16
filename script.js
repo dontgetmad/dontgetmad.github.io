@@ -8,15 +8,24 @@ function imageOrVideoRandomiser() {
 }
 
 function showRandomImage() {
-    let image_quantity = 276;
-    const randomIndex = Math.floor(Math.random() * image_quantity);
-    const imgElement = document.getElementById('randomImage');
-    if (imgElement) {
-        imgElement.src = `images/image_${randomIndex}.jpeg`;
-    } else {
-        console.error("Image element with id 'randomImage' not found.");
-    }
+  const image_quantity = 276; // Number of images available
+  const randomIndex = Math.floor(Math.random() * image_quantity);
+
+  const imageElement = document.createElement('img');
+
+  imageElement.src = `images/image_${randomIndex}.jpeg`;
+
+  imageElement.alt = `Random image ${randomIndex}`;
+
+  imageElement.className = 'random-image'; // Add a class for styling if needed
+
+  const imageContainer = document.getElementById('image-container');
+
+  imageContainer.innerHTML = '';
+
+  imageContainer.appendChild(imageElement);
 }
+
 
 function showRandomVideo() {
     let video_quantity = 41;
@@ -24,8 +33,8 @@ function showRandomVideo() {
     const videoElement = document.createElement('video');
 
     videoElement.controls = true; 
-    videoElement.autoplay = true; 
-    videoElement.loop = false; 
+    videoElement.autoplay = true;
+    videoElement.loop = true; 
 
     const videoSource = `videos/video_${randomIndex}.mp4`;
     console.log(videoSource);
@@ -52,6 +61,7 @@ function generateBarcode() {
             barcodeDiv.innerHTML = `<svg id="barcode${i}"></svg>`;
             barcodeContainer.appendChild(barcodeDiv);
             JsBarcode(`#barcode${i}`, lines[i]);
+
             document.getElementById("generatedAmount").innerHTML = lines.length;
         }
     } catch (error) {
