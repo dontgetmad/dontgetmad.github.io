@@ -12,8 +12,9 @@ function showRandomImage() {
   const randomIndex = Math.floor(Math.random() * image_quantity);
   const imageElement = document.createElement('img');
 
-  imageElement.src = `images/image_${randomIndex}.jpeg`;
-
+  const imgPath = `images/image_${randomIndex}.jpeg`;
+  imageElement.src = imgPath;
+  console.log("Image path:", imgPath);
   const imageContainer = document.getElementById('image-container');
 
   imageContainer.append(imageElement);
