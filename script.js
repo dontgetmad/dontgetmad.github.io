@@ -10,20 +10,14 @@ function imageOrVideoRandomiser() {
 function showRandomImage() {
   const image_quantity = 276; // Number of images available
   const randomIndex = Math.floor(Math.random() * image_quantity);
-
   const imageElement = document.createElement('img');
 
   imageElement.src = `images/image_${randomIndex}.jpeg`;
-
   imageElement.alt = `Random image ${randomIndex}`;
-
-  imageElement.className = 'random-image'; // Add a class for styling if needed
 
   const imageContainer = document.getElementById('image-container');
 
-  imageContainer.innerHTML = '';
-
-  imageContainer.appendChild(imageElement);
+  imageContainer.append(imageElement);
 }
 
 
