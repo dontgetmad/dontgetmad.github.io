@@ -30,7 +30,7 @@ function showRandomVideo() {
     videoElement.autoplay = true;
     videoElement.loop = true; 
 
-    const videoSource = `videos/video_${randomIndex}.MP4`;
+    const videoSource = `https://dontgetmad.github.io/my-repository/videos/video_${randomIndex}.MP4`;
     console.log(videoSource);
     const videoSourceElement = document.createElement('source');
     videoSourceElement.src = videoSource;
