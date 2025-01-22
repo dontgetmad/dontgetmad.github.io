@@ -22,7 +22,7 @@ function showRandomImage() {
 
 
 function showRandomVideo() {
-    let video_quantity = 49;
+    let video_quantity = 63;
     const randomIndex = Math.floor(Math.random() * video_quantity + 1);
     const videoElement = document.createElement('video');
 
