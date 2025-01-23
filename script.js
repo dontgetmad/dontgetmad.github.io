@@ -8,8 +8,12 @@ function imageOrVideoRandomiser() {
 }
 
 function showRandomImage() {
-  const image_quantity = 276; // Number of images available
+  const image_quantity = 323; // Number of images available
   const randomIndex = Math.floor(Math.random() * image_quantity);
+  if (randomIndex >= 252 && randomIndex <= 276) {
+    randomIndex = Math.floor(Math.random() * image_quantity);
+  }
+
   const imageElement = document.createElement('img');
 
   const imgPath = `images/image_${randomIndex}.jpeg`;
