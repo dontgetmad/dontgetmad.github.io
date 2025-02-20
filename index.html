@@ -10,16 +10,14 @@
 </head>
 <body>
         <div class="container">
-        <div id="image-container">
-        </div>
-        <div id="video-container">
-        </div>
         <h1 id="title">Barcode Generator<br></h1>
         <textarea placeholder="Enter your text here...", id="input"></textarea>
         <div id="generatedAmountContainer">Total generated barcodes: <span id="generatedAmount"></span></div>
         <button onclick="generateBarcode()">Generate barcodes</button>
-        <div id="barcodeContainer"></div>
+        <div id="barcodeContainer">
         <svg id="barcode"></svg>
+        </div>
     </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 </body>
 </html>
