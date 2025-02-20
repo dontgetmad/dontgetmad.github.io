@@ -31,10 +31,12 @@ button {
     border-radius: 40px;
     cursor: pointer;
     margin: 0 auto;
+    padding: 5px;
 }
 #barcodeContainer div {
     margin: 10px 0;      /* Space between barcodes */
-    text-align: center;  /* Center the barcode SVGs */
+    text-align: center;
+    padding-top: 20px;  /* Center the barcode SVGs */
 }
 #barcodeContainer svg {
     max-width: 100%;     /* Ensure barcodes don't overflow */
@@ -68,7 +70,7 @@ img {
   z-index: 99; /* Make sure it does not overlap */
   outline: none; /* Remove outline */
   background-color: white; /* Set a background color */
-  color: black; /* Text color */
+  color: blue; /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
   padding: 15px; /* Some padding */
   border-radius: 10px; /* Rounded corners */
