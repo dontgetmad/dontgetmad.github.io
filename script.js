@@ -1,3 +1,6 @@
+document.addEventListener("DOMContentLoaded", imageOrVideoRandomiser);
+
+
 function imageOrVideoRandomiser() {
     const imgOrVid = Math.floor(Math.random() * 2);
     if (imgOrVid == 0) {
@@ -45,7 +48,6 @@ function showRandomVideo() {
     videoContainer.append(videoElement);
 }
 
-document.addEventListener("DOMContentLoaded", imageOrVideoRandomiser);
 
 function generateBarcode() {
     barcodeContainer.innerHTML = '';
@@ -57,13 +59,31 @@ function generateBarcode() {
         for (let i  = 0; i < lines.length; i++) {
             const barcodeDiv = document.createElement('div');
             barcodeDiv.innerHTML = `<svg id="barcode${i}"></svg>`;
+            const barcodeNumber = document.createElement('div');
+            barcodeNumber.textContent = `Barcode ${i + 1}`;
+            barcodeNumber.style.color = 'blue';
             barcodeContainer.appendChild(barcodeDiv);
+            barcodeContainer.appendChild(barcodeNumber);
             JsBarcode(`#barcode${i}`, lines[i]);
-
             document.getElementById("generatedAmount").innerHTML = lines.length;
         }
     } catch (error) {
         console.log("Error generating barcode:", error);
     }
     console.log(`${lines.length} barcodes generated`);
+}
+
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 }
