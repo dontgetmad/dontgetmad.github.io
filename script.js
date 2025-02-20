@@ -62,8 +62,8 @@ function generateBarcode() {
             const barcodeNumber = document.createElement('div');
             barcodeNumber.textContent = `Barcode ${i + 1}`;
             barcodeNumber.style.color = 'blue';
-            barcodeContainer.appendChild(barcodeDiv);
             barcodeContainer.appendChild(barcodeNumber);
+            barcodeContainer.appendChild(barcodeDiv);
             JsBarcode(`#barcode${i}`, lines[i]);
             document.getElementById("generatedAmount").innerHTML = lines.length;
         }
