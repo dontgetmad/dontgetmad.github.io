@@ -13,7 +13,10 @@
         <h1 id="title">Barcode Generator<br></h1>
         <textarea placeholder="Enter your text here...", id="input"></textarea>
         <div id="generatedAmountContainer">Total generated barcodes: <span id="generatedAmount"></span></div>
+        <div id="btncontainer">
         <button id="generateButton" onclick="generateBarcode()">Generate barcodes</button>
+        <button id="clearButton" onclick="clearBarcodes()">Clear barcodes</button>
+        </div> 
         <div id="barcodeContainer">
         <svg id="barcode"></svg>
         </div>
