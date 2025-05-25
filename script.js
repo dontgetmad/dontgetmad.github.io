@@ -73,6 +73,12 @@ function generateBarcode() {
     console.log(`${lines.length} barcodes generated`);
 }
 
+function clearBarcodes() {
+      document.getElementById("barcodeContainer").innerHTML = "";
+      document.getElementById("input").value = "";
+      document.getElementById("generatedAmount").innerHTML = "";
+}
+
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
